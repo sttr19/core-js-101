@@ -53,8 +53,10 @@ function generateOdds(len) {
  *    [0, 1, 2, 3, 4, 5] => [0, 1, 2, 3, 4, 5,   0, 1, 2, 3, 4, 5]
  *    [] => []
  */
-function doubleArray(/* arr */) {
-  throw new Error('Not implemented');
+function doubleArray(arr) {
+  const copyArr = new Array(arr.length).fill(0).map((e, i) => arr[i]);
+  const result = arr.concat(copyArr);
+  return result;
 }
 
 /**
